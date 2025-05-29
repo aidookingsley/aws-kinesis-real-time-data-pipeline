@@ -42,26 +42,29 @@ This project simulates temperature readings from IoT devices and streams them in
 ```bash
 git clone https://github.com/aidookingsley/aws-kinesis-real-time-data-pipeline.git
 cd aws-kinesis-real-time-datapipeline
+```
 
 2. Set up your Python environment
-
+```
 python3 -m venv venv
 source venv/bin/activate      # On Windows: venv\Scripts\activate
 pip install boto3
+```
 Tip: Add venv/ to your .gitignore so it isn’t pushed to Git.
 
 3. Configure AWS credentials
 Make sure the AWS CLI is installed, then run:
-
+```
 aws configure
+```
 Provide your Access Key ID, Secret Access Key, preferred region (e.g., us-east-1), and desired output format.
 
 4. Deploy AWS infrastructure with Terraform
 From the terraform/ directory:
-
+```
 terraform init
 terraform apply
-
+```
 Terraform will provision:
 
 A Kinesis stream (temperature-stream)
@@ -77,8 +80,9 @@ Ensure lambda.zip (containing lambda_func.py) is referenced correctly in main.tf
 5. Simulate IoT data
 
 Back in the project root:
-
-python iot_simulate_temp.py
+```
+python3 iot_simulate_temp.py
+```
 Random temperature readings will begin streaming into Kinesis, triggering the Lambda function, which stores each reading in DynamoDB.
 
 🧪 Testing & Monitoring
@@ -93,11 +97,13 @@ Runtime.ImportModuleError: confirm the handler is set to lambda_func.lambda_hand
 Permission errors: verify the Lambda role has dynamodb:PutItem on your table.
 
 🗃️ DynamoDB Schema
+```
 Partition Key	Sort Key	Attribute
 device_id	timestamp	temperature (Number)
+```
 
 📄 .gitignore
-
+```
 venv/
 __pycache__/
 *.pyc
@@ -105,7 +111,7 @@ __pycache__/
 .env
 .terraform/
 terraform.tfstate*
-
+```
 🤝 Contributing
 Fork the repository
 
