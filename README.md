@@ -6,7 +6,22 @@ This project simulates temperature readings from IoT devices and streams them in
 
 ## 📦 Project Structure
 
-<pre><code>```plaintext . ├── lambda_func.py ├── README.md ├── terraform │ ├── iam_policy.tf │ ├── lambda.tf │ ├── main.tf │ ├── outputs.tf │ └── variables.tf ├── requirements.txt └── .gitignore ```</code></pre>
+## 📁 Project Structure
+
+```plaintext
+.
+├── lambda_func.py
+├── README.md
+├── terraform
+│   ├── iam_policy.tf
+|   ├── providers.tf
+|   ├── kinesis.tf 
+│   ├── lambda.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   └── variables.tf
+├── iot_simulate_temp.py
+└── .gitignore
 
 
 
