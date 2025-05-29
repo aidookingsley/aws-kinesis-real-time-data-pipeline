@@ -6,7 +6,7 @@ This project simulates temperature readings from IoT devices and streams them in
 
 ## 📁 Project Structure
 
-```plaintext
+```
 .
 ├── lambda_func.py
 ├── README.md
@@ -20,7 +20,7 @@ This project simulates temperature readings from IoT devices and streams them in
 │   └── variables.tf
 ├── iot_simulate_temp.py
 └── .gitignore
-```plaintext
+
 
 
 ---
@@ -42,7 +42,6 @@ This project simulates temperature readings from IoT devices and streams them in
 ```bash
 git clone https://github.com/aidookingsley/aws-kinesis-real-time-data-pipeline.git
 cd aws-kinesis-real-time-datapipeline
-```bash
 
 2. Set up your Python environment
 ```
