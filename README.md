@@ -6,7 +6,7 @@ This project simulates temperature readings from IoT devices and streams them in
 
 ## 📦 Project Structure
 
-.
+
 ├── iot_simulate_temp.py # Simulates IoT temperature sensor data
 ├── lambda_func.py # AWS Lambda function that processes Kinesis records
 ├── lambda.zip # Zipped Lambda code ready for deployment
