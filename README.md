@@ -53,6 +53,7 @@ pip install boto3
 ```
 Tip: Add venv/ to your .gitignore so it isn’t pushed to Git.
 
+
 3. Configure AWS credentials
 Make sure the AWS CLI is installed, then run:
 ```
@@ -66,17 +67,17 @@ From the terraform/ directory:
 terraform init
 terraform apply
 ```
-Terraform will provision:
+- [x] ** Terraform will provision: **
 
-A Kinesis stream (temperature-stream)
+- [ ] A Kinesis stream (temperature-stream)
 
-A DynamoDB table (TemperatureReadings)
+- [ ] A DynamoDB table (TemperatureReadings)
 
-An IAM role with least-privilege policies
+- [ ] An IAM role with least-privilege policies
 
-A Lambda function wired to the stream trigger
+- [ ] A Lambda function wired to the stream trigger
 
-Ensure lambda.zip (containing lambda_func.py) is referenced correctly in main.tf.
+Ensure lambda_func.zip (containing lambda_func.py) is referenced correctly in main.tf.
 
 5. Simulate IoT data
 
@@ -86,18 +87,19 @@ python3 iot_simulate_temp.py
 ```
 Random temperature readings will begin streaming into Kinesis, triggering the Lambda function, which stores each reading in DynamoDB.
 
-🧪 Testing & Monitoring
+
+## 🧪  Testing & Monitoring ##
 
 CloudWatch Logs:
 Check /aws/lambda/process-temperature-stream to verify the Lambda function is executing without errors.
 
-Common gotchas:
+## Common gotchas: ##
 
 Runtime.ImportModuleError: confirm the handler is set to lambda_func.lambda_handler.
 
 Permission errors: verify the Lambda role has dynamodb:PutItem on your table.
 
-🗃️ DynamoDB Schema
+## 🗃️ DynamoDB Schema ##
 ```
 Partition Key	Sort Key	Attribute
 device_id	timestamp	temperature (Number)
@@ -113,7 +115,7 @@ __pycache__/
 .terraform/
 terraform.tfstate*
 ```
-🤝 Contributing
+## 🤝 Contributing ##
 Fork the repository
 
 Create a feature branch (git checkout -b feat/amazing-feature)
@@ -124,14 +126,14 @@ Push to the branch (git push origin feat/amazing-feature)
 
 Open a Pull Request
 
-📜 License
+## 📜 License ##
 This project is licensed under the MIT License. See LICENSE for details.
 
-🧠 Acknowledgements
+## 🧠 Acknowledgements ##
 AWS Documentation — for detailed service guides
 
 Terraform AWS Provider — for IaC modules
 
-📬 Contact
-For questions or suggestions, open an issue or reach out to aidookingsleymensah@gmail.com .
+## 📬 Contact ##
+For questions or suggestions, open an issue or reach out to *aidookingsleymensah@gmail.com*.
 
