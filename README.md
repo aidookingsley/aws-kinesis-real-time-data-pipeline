@@ -20,7 +20,7 @@ This project simulates temperature readings from IoT devices and streams them in
 │   └── variables.tf
 ├── iot_simulate_temp.py
 └── .gitignore
-
+```
 
 
 ---
