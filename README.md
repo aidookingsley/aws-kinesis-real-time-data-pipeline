@@ -70,7 +70,7 @@ From the terraform/ directory:
 terraform init
 terraform apply
 ```
-- [x] ### Terraform will provision: ###
+ ### Terraform will provision: ###
 
 - [ ] A Kinesis stream (temperature-stream)
 
