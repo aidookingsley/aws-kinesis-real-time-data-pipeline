@@ -6,17 +6,8 @@ This project simulates temperature readings from IoT devices and streams them in
 
 ## 📦 Project Structure
 
+<pre><code>```plaintext . ├── lambda_func.py ├── README.md ├── terraform │ ├── iam_policy.tf │ ├── lambda.tf │ ├── main.tf │ ├── outputs.tf │ └── variables.tf ├── requirements.txt └── .gitignore ```</code></pre>
 
-├── iot_simulate_temp.py # Simulates IoT temperature sensor data
-├── lambda_func.py # AWS Lambda function that processes Kinesis records
-├── lambda.zip # Zipped Lambda code ready for deployment
-├── terraform/ # Terraform configs for AWS resources
-│ ├── main.tf
-│ ├── variables.tf
-│ ├── iam_policy.tf
-│ └── …
-├── .gitignore
-└── README.md 
 
 
 ---
