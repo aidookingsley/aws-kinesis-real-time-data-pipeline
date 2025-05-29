@@ -42,8 +42,10 @@ This project simulates temperature readings from IoT devices and streams them in
 ```bash
 git clone https://github.com/aidookingsley/aws-kinesis-real-time-data-pipeline.git
 cd aws-kinesis-real-time-datapipeline
+```
 
 2. Set up your Python environment
+
 ```
 python3 -m venv venv
 source venv/bin/activate      # On Windows: venv\Scripts\activate
