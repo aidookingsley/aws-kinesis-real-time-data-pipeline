@@ -1,0 +1,12 @@
+venv/
+*.pyc
+__pycache__/
+.env
+*.zip
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
