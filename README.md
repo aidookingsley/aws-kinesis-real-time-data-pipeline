@@ -4,8 +4,6 @@ This project simulates temperature readings from IoT devices and streams them in
 
 ---
 
-## 📦 Project Structure
-
 ## 📁 Project Structure
 
 ```plaintext
