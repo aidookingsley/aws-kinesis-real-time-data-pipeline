@@ -37,12 +37,14 @@ This project simulates temperature readings from IoT devices and streams them in
 
 ## 🔧 Setup Instructions
 
+
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/aidookingsley/aws-kinesis-real-time-data-pipeline.git
 cd aws-kinesis-real-time-datapipeline
 ```
+
 
 2. Set up your Python environment
 
@@ -61,13 +63,14 @@ aws configure
 ```
 Provide your Access Key ID, Secret Access Key, preferred region (e.g., us-east-1), and desired output format.
 
+
 4. Deploy AWS infrastructure with Terraform
 From the terraform/ directory:
 ```
 terraform init
 terraform apply
 ```
-- [x] ** Terraform will provision: **
+- [x] ### Terraform will provision: ###
 
 - [ ] A Kinesis stream (temperature-stream)
 
@@ -78,6 +81,7 @@ terraform apply
 - [ ] A Lambda function wired to the stream trigger
 
 Ensure lambda_func.zip (containing lambda_func.py) is referenced correctly in main.tf.
+
 
 5. Simulate IoT data
 
@@ -93,11 +97,13 @@ Random temperature readings will begin streaming into Kinesis, triggering the La
 CloudWatch Logs:
 Check /aws/lambda/process-temperature-stream to verify the Lambda function is executing without errors.
 
+
 ## Common gotchas: ##
 
 Runtime.ImportModuleError: confirm the handler is set to lambda_func.lambda_handler.
 
 Permission errors: verify the Lambda role has dynamodb:PutItem on your table.
+
 
 ## 🗃️ DynamoDB Schema ##
 ```
@@ -105,7 +111,8 @@ Partition Key	Sort Key	Attribute
 device_id	timestamp	temperature (Number)
 ```
 
-📄 .gitignore
+
+## 📄 .gitignore ##
 ```
 venv/
 __pycache__/
@@ -115,6 +122,8 @@ __pycache__/
 .terraform/
 terraform.tfstate*
 ```
+
+
 ## 🤝 Contributing ##
 Fork the repository
 
@@ -126,13 +135,17 @@ Push to the branch (git push origin feat/amazing-feature)
 
 Open a Pull Request
 
+
 ## 📜 License ##
 This project is licensed under the MIT License. See LICENSE for details.
+
+
 
 ## 🧠 Acknowledgements ##
 AWS Documentation — for detailed service guides
 
 Terraform AWS Provider — for IaC modules
+
 
 ## 📬 Contact ##
 For questions or suggestions, open an issue or reach out to *aidookingsleymensah@gmail.com*.
